@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.nit.service")
 public class AppConfig { 
 	
-	
+
 	
 }
