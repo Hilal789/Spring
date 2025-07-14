@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="Cus" class="com.nit.bean.Customer">
+		<property name="firstName" value="abc"></property>
+		<property name="lastName" value="Dc"></property>
+
+	</bean>
+
+	<bean id="Acc" class="com.nit.bean.Account">
+		<property name="accountNo" value="123456" />
+		<property name="balance" value="10000" />
+		<property name="interestRate" value="4.5" />
+         <property name="c" ref="Cus"></property>
+	</bean>
+
+
+
+
+
+
+</beans>
+
+
