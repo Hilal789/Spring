@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="email" class="com.nit.bean.EmailNotification"></bean>
+	<bean id="sms" class="com.nit.bean.SmsNotification"></bean> -->
+
+ 	<bean id="SetSms" class="com.nit.bean.NotificationSender">
+ 		<property name="sms" value="Hello" />
+ 		
+ 	</bean>
+
+	
+	<!-- <bean id="Nss" class="com.nit.bean.NotificationSender">
+
+		<constructor-arg name="ns" ref="sms" />
+
+	</bean> -->
+
+
+</beans>
