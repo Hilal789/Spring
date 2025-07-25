@@ -1,0 +1,80 @@
+Internationalization (i18n) – Practical Task in Spring Core
+🎯 Objective:
+Create a Spring Core application that supports Internationalization (i18n) by displaying messages in multiple languages (e.g., English, Hindi, Telugu). It should dynamically adjust messages based on user-selected locale and include support for parameterized messages and date formatting.
+
+✅ Task Overview:
+Configure Message Source
+
+Use ResourceBundleMessageSource bean to load property files.
+
+Create 3 message bundles:
+
+messages_en.properties
+
+messages_hi.properties
+
+messages_te.properties
+
+Create Messages
+
+Add keys like greeting, farewell, date.format, etc.
+
+Example:
+greeting=Hello, {0}!
+farewell=Goodbye!
+date.format=Today is {0,date,long}
+
+Java Configuration (No XML)
+
+Use @Configuration to define beans.
+
+Define MessageSource and LocaleResolver beans.
+
+User Input for Locale
+
+Create a LocaleSelector class that allows the user to enter language code (en, hi, te) from the console.
+
+Based on input, set the locale.
+
+Message Display Logic
+
+Create a MessagePrinter class that:
+
+Accepts user name.
+
+Prints a localized greeting using MessageSource.
+
+Displays today’s date in locale-specific format.
+
+Parameterized Messages
+
+Use MessageFormat style parameter insertion (e.g., "Hello, {0}").
+
+Fallback Handling
+
+If user selects unsupported locale, fallback to English.
+
+
+📁 Suggested Project Structure:
+
+/src
+ └── /com/example/i18n
+      ├── App.java
+      ├── AppConfig.java
+      ├── LocaleSelector.java
+      ├── MessagePrinter.java
+      └── DateFormatterUtil.java
+
+/resources
+ ├── messages_en.properties
+ ├── messages_hi.properties
+ └── messages_te.properties
+📌 Deliverables:
+Java config class (AppConfig)
+
+Working console-based Spring app with language selection
+
+All three .properties files
+
+Screenshot or console output showing successful execution for all three languages
+
